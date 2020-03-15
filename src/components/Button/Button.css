@@ -1,0 +1,8 @@
+.Button {
+  border-width: 0px;
+  font-size: 25px;
+}
+
+.Button:hover {
+  color: rgb(195, 171, 210)
+}

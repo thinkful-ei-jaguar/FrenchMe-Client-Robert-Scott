@@ -1,0 +1,27 @@
+h1 {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.header {
+  font-size: 60px;
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(79, 79, 79);
+  margin: 0 auto;
+}
+
+.links{
+  margin-top: 0px;
+  margin: 10px;
+  font-size: 30px;
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(79, 79, 79)
+}
+
+.links:hover {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(195, 171, 210)
+}
