@@ -44,7 +44,7 @@ class Header extends Component {
       <header>
         <h1>
           <Link className='header' to='/'>
-            French Moi
+            French Moi <span role='img' aria-label='french-flag-emoji'>🇫🇷</span>
           </Link>
         </h1>
         {TokenService.hasAuthToken()
