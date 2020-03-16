@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import LanguageService from '../../services/language-service';
-
+import LanguageContext from '../../contexts/LanguageContext'
 
 class DashboardRoute extends Component {
-  
+  static contextType =LanguageContext ;
   constructor(props){
     super(props);
     this.state={
@@ -22,7 +22,10 @@ class DashboardRoute extends Component {
         language:res.language,
         words:res.words,
       })
-      console.log(this.state)
+      this.context.setLanguage(res.language);
+      this.context.setWords(res.words);
+      //console.log(this.state);
+      //console.log(this.context);
     })
   }
 
@@ -31,7 +34,6 @@ class DashboardRoute extends Component {
       return <div>
         <p>{w.original}</p>
     <p> correct:{w.correct_count} incorrect:{w.incorrect_count}</p>
-        
         </div>
     })
   }
