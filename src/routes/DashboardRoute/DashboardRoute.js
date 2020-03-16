@@ -30,10 +30,10 @@ class DashboardRoute extends Component {
   }
 
   mapthewords=(words)=>{
-    return words.map(w=>{
-      return <div>
+    return words.map((w, idx)=>{
+      return <div key={idx}>
         <p>{w.original}</p>
-    <p> correct:{w.correct_count} incorrect:{w.incorrect_count}</p>
+    <p> Correct Answer Count:{w.correct_count} Incorrect Answer Count:{w.incorrect_count}</p>
         </div>
     })
   }
@@ -45,12 +45,14 @@ class DashboardRoute extends Component {
     return (
       <section>
         <h2 className='languageHeader'>Language: {this.state.language.name}</h2>
-        
-        <h3 className='languageHeader'>Words to Practice</h3>
-        <div>
-          {this.mapthewords(this.state.words)}
-          </div>
         <Link to='/learn'>Start Practicing</Link>
+        <h4> Correct Answer Count:{this.state.total_count} </h4>
+        <br />
+        <h3 className='languageHeader'>Words to Practice</h3>
+        <ul>
+          {this.mapthewords(this.state.words)}
+        </ul>
+        
       </section>
     );
   }
