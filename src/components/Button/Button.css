@@ -1,8 +1,10 @@
 .Button {
+  color: rgb(195, 171, 210);
   border-width: 0px;
   font-size: 25px;
 }
 
 .Button:hover {
-  color: rgb(195, 171, 210)
+  color: rgb(150, 209, 210)
 }
+
