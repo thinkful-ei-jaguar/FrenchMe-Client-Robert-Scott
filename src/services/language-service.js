@@ -15,6 +15,22 @@ const LanguageService = {
               : res.json()
           )
       },
+      getHead() {
+        return fetch(`${config.API_ENDPOINT}/language/head`, {
+          headers: {
+            'Authorization':`Bearer ${TokenService.getAuthToken()}`,
+            'content-type': 'application/json',
+          },
+        })
+          .then(res =>
+            (!res.ok)
+              ? res.json().then(e => Promise.reject(e))
+              : res.json()
+          )
+      },
+
+
+
 }
 
 export default LanguageService
