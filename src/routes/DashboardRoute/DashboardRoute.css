@@ -1,0 +1,9 @@
+.frenchWord {
+  font-style: oblique;
+  color: rgb(60, 72, 198);
+}
+
+.incorrectWord {
+  color: rgb(210, 64, 64);
+}
+

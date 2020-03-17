@@ -1,0 +1,13 @@
+.learnPage {
+  height: 100vh;
+}
+
+.guessInput {
+  font-size: 20px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.submitAnswer {
+  margin: 15px;
+}

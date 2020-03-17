@@ -4,16 +4,29 @@ h1 {
 }
 
 .header {
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
   font-size: 60px;
   list-style-type: none;
   text-decoration: none;
   color: rgb(79, 79, 79);
-  margin: 0 auto;
+}
+.navLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.userName {
+  margin-right: 80px;
 }
 
 .links{
-  margin-top: 0px;
-  margin: 10px;
+  /* margin-right: 20px;
+  margin-top: 20px;
+  margin: 10px; */
   font-size: 30px;
   list-style-type: none;
   text-decoration: none;
@@ -23,5 +36,5 @@ h1 {
 .links:hover {
   list-style-type: none;
   text-decoration: none;
-  color: rgb(195, 171, 210)
+  color: rgb(210, 64, 64);
 }

@@ -1,10 +1,17 @@
 .Button {
-  color: rgb(195, 171, 210);
-  border-width: 0px;
+  color: rgb(210, 64, 64);
+  border-width: 3px;
   font-size: 25px;
+  padding: 6px;
+  border-radius: 3px;
 }
 
 .Button:hover {
-  color: rgb(150, 209, 210)
+  color: rgb(60, 72, 198);
+  background-color: rgb(210, 64, 64);
+  color: white;
+  -webkit-box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
+  -moz-box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
+  box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
 }
 

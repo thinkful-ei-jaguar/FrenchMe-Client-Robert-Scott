@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import LanguageService from '../../services/language-service';
-import LanguageContext from '../../contexts/LanguageContext'
-
+import LanguageContext from '../../contexts/LanguageContext';
+import './DashboardRoute.css';
 class DashboardRoute extends Component {
   static contextType =LanguageContext ;
   constructor(props){
@@ -13,7 +13,6 @@ class DashboardRoute extends Component {
 
     }
   }
-
 
   componentDidMount(){
     LanguageService.GetLanguage()
@@ -29,25 +28,26 @@ class DashboardRoute extends Component {
     })
   }
 
-  mapthewords=(words)=>{
-    return words.map((w, idx)=>{
+  mapTheWords=(words)=>{
+    return words.map((word, idx)=>{
       return <div key={idx}>
-        <h2>{w.original}</h2>
-    <p> Correct Answer Count:{w.correct_count} Incorrect Answer Count:{w.incorrect_count}</p>
+        <h2 className='frenchWord'>{word.original}</h2>
+    <p className='correctWord'> Correct Answer Count: {word.correct_count}</p>
+    <p className='incorrectWord'>Incorrect Answer Count: {word.incorrect_count}</p>
         </div>
     })
   }
 
   render() {
     return (
-      <section>
+      <section className='dashboard'>
         <h2 className='languageHeader'>Language: {this.state.language.name}</h2>
         <Link to='/learn'>Start Practicing</Link>
         <h4> Correct Answer Count:{this.state.total_count} </h4>
         <br />
         <h3 className='languageHeader'>Words to Practice</h3>
         <div>
-          {this.mapthewords(this.state.words)}
+          {this.mapTheWords(this.state.words)}
         </div>
         
       </section>
