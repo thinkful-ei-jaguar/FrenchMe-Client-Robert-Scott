@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
-import LanguageContext from '../../contexts/LanguageContext'
+import LanguageContext from '../../contexts/LanguageContext';
 import Button from '../../components/Button/Button';
 import './LearningRoute.css';
 import LanguageService from '../../services/language-service';
 class LearningRoute extends Component {
-  static contextType =LanguageContext ;
+  static contextType = LanguageContext ;
+
   constructor(props){
     super(props);
     this.state={
@@ -15,35 +15,35 @@ class LearningRoute extends Component {
       isLoading:true,
       isCorrect:true,
     }
-    //this.checkifanswerisright=this.checkifanswerisright.bind(this)
   }
+
   async componentDidMount(){
     await LanguageService.getHead()
-    .then(res=>{
+    .then(res => {
       this.setState({
         language:this.context.language,
         words:res.firstword,
       })
-      console.log(this.state);
     })
   }
+
   handleChangeAnswer = e =>{
-    console.log(e.target.value)
     this.setState({
       guess:e.target.value,
     })
   }
-  checkifanswerisright = (value) =>{
+
+  checkIfAnswerIsRight = value =>{
     if(value === this.state.words.translation){
-      console.log("quess right")
       return true
     }
-    console.log("guess wrong")
     return false
   }
-  handlesubmit=(e)=>{
+
+  handleSubmit= e =>{
     e.preventDefault();
-    let check = this.checkifanswerisright(this.state.guess);
+
+    let check = this.checkIfAnswerIsRight(this.state.guess);
     if(check){
       this.setState({
         isLoading:false,
@@ -58,12 +58,12 @@ class LearningRoute extends Component {
 
   }
 
-  learnpage=()=>{
+  learnPage = () => {
     return (<section className='learnPage'>
         <h2 className='languageHeader'>This is learning page</h2>
         <div></div>
-        <form onSubmit={this.handlesubmit}>
-          <label>How do you say {this.state.words.original} in french?
+        <form onSubmit={this.handleSubmit}>
+          <label>How do you say {this.state.words.original} in English?
             <input onChange={this.handleChangeAnswer} value={this.state.guess} className='guessInput' type='text' />
           </label>
           <br />
@@ -73,29 +73,25 @@ class LearningRoute extends Component {
       )
   }
 
-
-  feedbackpage=()=>{
+  feedbackPage = () => {
     if(this.state.isCorrect){
     return (<section className='learnPage'>
-        <h2 className='languageHeader'>You are right</h2>
-        <div></div>      
+        <h2 className='languageHeader'>You were correct! :D</h2>    
         <Button>Next Word</Button>
       </section>
       )
-    }else{
+    } else {
       return (<section className='learnPage'>
-        <h2 className='languageHeader'>You are wrong</h2>
-        <div></div>      
+        <h2 className='languageHeader'>The correct translation for {this.state.words.original} was {this.state.words.translation} and you chose {this.state.guess}.</h2> 
         <Button>Next Word</Button>
       </section>
       )
     }
   }
 
-
   render() {
     return (<div>
-      {this.state.isLoading ? this.learnpage() : this.feedbackpage()}
+      {this.state.isLoading ? this.learnPage() : this.feedbackPage()}
       </div>
     );
   }
