@@ -40,8 +40,9 @@ class LearningRoute extends Component {
     return false
   }
 
-  handleSubmit= e =>{
+  handleSubmit = (e) =>{
     e.preventDefault();
+    LanguageService.postGuess({guess: this.state.guess})
 
     let check = this.checkIfAnswerIsRight(this.state.guess);
     if(check){
@@ -55,7 +56,15 @@ class LearningRoute extends Component {
         isCorrect:false,
       })
     }
+  }
 
+  handleNextWord = () => {
+    this.componentDidMount()
+    this.setState({
+      isLoading: true,
+      isCorrect: true,
+      guess: '',
+    });
   }
 
   learnPage = () => {
@@ -63,7 +72,7 @@ class LearningRoute extends Component {
         <h2 className='languageHeader'>This is learning page</h2>
         <div></div>
         <form onSubmit={this.handleSubmit}>
-          <label>How do you say {this.state.words.original} in English?
+          <label>How do you say <em>{this.state.words.original}</em> in English?
             <input onChange={this.handleChangeAnswer} value={this.state.guess} className='guessInput' type='text' />
           </label>
           <br />
@@ -77,13 +86,13 @@ class LearningRoute extends Component {
     if(this.state.isCorrect){
     return (<section className='learnPage'>
         <h2 className='languageHeader'>You were correct! :D</h2>    
-        <Button>Next Word</Button>
+        <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
     } else {
       return (<section className='learnPage'>
         <h2 className='languageHeader'>The correct translation for {this.state.words.original} was {this.state.words.translation} and you chose {this.state.guess}.</h2> 
-        <Button>Next Word</Button>
+        <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
     }
