@@ -24,7 +24,10 @@ export class LanguageProvider extends Component {
   incrementLanguageTotalCount = () => {
     let newCount = this.state.language.total_score + 1
     this.setState({
-      language: {total_score: newCount}
+      language: {
+        ...this.state.language,
+        total_score: newCount
+      }
     })
   }
   setWords = words => {
