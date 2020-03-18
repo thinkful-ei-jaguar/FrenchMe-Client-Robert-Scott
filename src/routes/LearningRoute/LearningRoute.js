@@ -8,28 +8,28 @@ class LearningRoute extends Component {
 
   constructor(props){
     super(props);
-    this.state={
-      language:{},
-      words:{},
+    this.state = {
+      language: {},
+      words: {},
       guess:'',
-      isLoading:true,
-      isCorrect:true,
+      isLoading: true,
+      isCorrect: true,
     }
   }
 
   async componentDidMount(){
     await LanguageService.getHead()
-    .then(res => {
-      this.setState({
-        language:this.context.language,
-        words:res.firstword,
+      .then(res => {
+        this.setState({
+          language: this.context.language,
+          words: res.firstword,
+        })
       })
-    })
   }
 
   handleChangeAnswer = e =>{
     this.setState({
-      guess:e.target.value,
+      guess: e.target.value,
     })
   }
 
@@ -40,7 +40,7 @@ class LearningRoute extends Component {
     return false
   }
 
-  handleSubmit = (e) =>{
+  handleSubmit = e =>{
     e.preventDefault();
     LanguageService.postGuess({guess: this.state.guess})
 
@@ -50,7 +50,7 @@ class LearningRoute extends Component {
         isLoading:false,
       })
     }
-    else{
+    else {
       this.setState({ 
         isLoading:false,
         isCorrect:false,
