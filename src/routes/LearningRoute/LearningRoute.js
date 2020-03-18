@@ -84,18 +84,20 @@ class LearningRoute extends Component {
 
   feedbackPage = () => {
     if(this.state.isCorrect){
+    let newcount=this.state.words.correct_count+1
     return (<section className='learnPage'>
         <h2 className='languageHeader'>You were correct! :D</h2> 
-        <p>Correct Guesses: {this.state.words.correct_count}</p> 
+        <p>Correct Guesses: {newcount}</p> 
         <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>    
         <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
     } else {
+      let newcount=this.state.words.incorrect_count+1
       return (<section className='learnPage'>
         <h2 className='languageHeader'>The correct translation for {this.state.words.original} was {this.state.words.translation} and you chose {this.state.guess}.</h2> 
         <p>Correct Guesses: {this.state.words.correct_count}</p> 
-        <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>   
+        <p>Incorrect Guesses: {newcount}</p>   
         <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
