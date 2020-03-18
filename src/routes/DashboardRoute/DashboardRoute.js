@@ -23,14 +23,6 @@ class DashboardRoute extends Component {
       })
       this.context.setLanguage(res.language);
       this.context.setWords(res.words);
-      //console.log(this.state);
-      //console.log(this.context);
-    })
-    await LanguageService.postGuess()
-    .then(res => {
-      this.setState({
-        total_count: res.totalScore
-      })
     })
   }
 
@@ -49,7 +41,7 @@ class DashboardRoute extends Component {
       <section className='dashboard'>
         <h2 className='languageHeader'>Language: {this.state.language.name}</h2>
         <Link className='startPracticeButton' to='/learn'>Start Practicing</Link>
-        <h4> Correct Answer Count: {this.state.total_count} </h4>
+        <h4> Correct Answer Count: {this.state.language.total_score} </h4>
         <br />
         <h3 className='languageHeader'>Words to Practice:</h3>
         <div>
