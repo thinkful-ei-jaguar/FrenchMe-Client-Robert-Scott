@@ -7,3 +7,18 @@
   color: rgb(210, 64, 64);
 }
 
+.startPracticeButton {
+  border-radius: 5px;
+  background-color: rgb(246, 246, 246);
+  padding: 10px;
+  color: rgb(210, 64, 64);
+  font-size: 30px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.startPracticeButton:hover {
+  background-color: rgb(210, 64, 64);
+  color: rgb(246, 246, 246);
+}
+

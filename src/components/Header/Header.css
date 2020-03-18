@@ -4,13 +4,14 @@ h1 {
 
 .header {
   display: flex;
+  justify-content: space-between;
   background-color: rgb(249, 249, 249);
   border-bottom: 3px solid rgb(220, 220, 220);
 }
 
 .logo {
-  margin: 30px;
-  font-size: 60px;
+  font-size: 50px;
+  margin: 20px;
   list-style-type: none;
   text-decoration: none;
   color: rgb(79, 79, 79);
@@ -21,23 +22,26 @@ h1 {
 }
 
 .navLinks {
+  margin: 27px;
+}
+
+.userName {
   display: flex;
-  align-items: flex-start;
-  margin-top: 45px;
+  font-size: 15px;
 }
 
 .links{
-  padding: 15px;
+  margin: 15px;
   font-size: 30px;
   list-style-type: none;
   text-decoration: none;
-  color: rgb(79, 79, 79)
+  color: rgb(210, 64, 64);
 }
 
 .links:hover {
   list-style-type: none;
   text-decoration: none;
-  color: rgb(210, 64, 64);
+  border-bottom: 1px solid rgb(210, 64, 64);
 }
 
 @media screen and (max-width: 600px) {
