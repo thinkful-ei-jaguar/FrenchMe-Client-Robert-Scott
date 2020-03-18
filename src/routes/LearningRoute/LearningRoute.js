@@ -17,7 +17,7 @@ class LearningRoute extends Component {
     }
   }
 
-  async componentDidMount(){
+  async componentDidMount() {
     await LanguageService.getHead()
       .then(res => {
         this.setState({
@@ -85,13 +85,17 @@ class LearningRoute extends Component {
   feedbackPage = () => {
     if(this.state.isCorrect){
     return (<section className='learnPage'>
-        <h2 className='languageHeader'>You were correct! :D</h2>    
+        <h2 className='languageHeader'>You were correct! :D</h2> 
+        <p>Correct Guesses: {this.state.words.correct_count}</p> 
+        <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>    
         <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
     } else {
       return (<section className='learnPage'>
         <h2 className='languageHeader'>The correct translation for {this.state.words.original} was {this.state.words.translation} and you chose {this.state.guess}.</h2> 
+        <p>Correct Guesses: {this.state.words.correct_count}</p> 
+        <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>   
         <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
