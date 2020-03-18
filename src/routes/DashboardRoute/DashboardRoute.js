@@ -4,7 +4,7 @@ import LanguageService from '../../services/language-service';
 import LanguageContext from '../../contexts/LanguageContext';
 import './DashboardRoute.css';
 class DashboardRoute extends Component {
-  static contextType =LanguageContext ;
+  static contextType = LanguageContext ;
   constructor(props){
     super(props);
     this.state={
@@ -16,7 +16,7 @@ class DashboardRoute extends Component {
 
   async componentDidMount(){
     await LanguageService.GetLanguage()
-    .then(res=>{
+    .then(res => {
       this.setState({
         language:res.language,
         words:res.words,

@@ -49,6 +49,7 @@ class LearningRoute extends Component {
       this.setState({
         isLoading:false,
       })
+      this.context.incrementLanguageTotalCount()
     }
     else {
       this.setState({ 
@@ -84,11 +85,13 @@ class LearningRoute extends Component {
 
   feedbackPage = () => {
     if(this.state.isCorrect){
-    let newcount=this.state.words.correct_count+1
+    let newcount = this.state.words.correct_count + 1;
+    
     return (<section className='learnPage'>
-        <h2 className='languageHeader'>You were correct! :D</h2> 
+        <h2 className='languageHeader'>You were correct!</h2> 
         <p>Correct Guesses: {newcount}</p> 
-        <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>    
+        <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>
+        <p>Total Correct Count: {this.context.language.total_score} </p>  
         <Button onClick={this.handleNextWord}>Next Word</Button>
       </section>
       )
