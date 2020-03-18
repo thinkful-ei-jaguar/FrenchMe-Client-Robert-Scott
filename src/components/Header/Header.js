@@ -42,12 +42,12 @@ class Header extends Component {
   render() {
     return (
       <header className='header'>
-        <h1>
-          {/* <span role='img' aria-label='french-flag-emoji'>🇫🇷</span> */}
+        <div className='logo'>
+          <span role='img' aria-label='french-flag-emoji'>🇫🇷</span>
           <Link className='logo' to='/'>
             French Moi
           </Link>
-        </h1>
+        </div>
         <div className='navLinks'>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

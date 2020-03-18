@@ -1,32 +1,33 @@
 h1 {
-  margin: 0 auto;
-  padding: 0px;
+  margin-left: 15px;
 }
 
 .header {
-  margin: 0 auto;
+  display: flex;
+  background-color: rgb(249, 249, 249);
+  border-bottom: 3px solid rgb(220, 220, 220);
 }
 
 .logo {
-  display: block;
+  margin: 30px;
   font-size: 60px;
   list-style-type: none;
   text-decoration: none;
   color: rgb(79, 79, 79);
 }
-.navLinks {
-  display: flex;
-  justify-content: flex-end;
+
+.logo:hover {
+  color: rgb(83, 83, 212);
 }
 
-.userName {
-  margin-right: 80px;
+.navLinks {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 45px;
 }
 
 .links{
-  /* margin-right: 20px;
-  margin-top: 20px;
-  margin: 10px; */
+  padding: 15px;
   font-size: 30px;
   list-style-type: none;
   text-decoration: none;
@@ -37,4 +38,35 @@ h1 {
   list-style-type: none;
   text-decoration: none;
   color: rgb(210, 64, 64);
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(249, 249, 249);
+    border-bottom: 3px solid rgb(220, 220, 220);
+  }
+  .logo {
+    margin: 10px;
+    font-size: 130%;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(79, 79, 79);
+  }
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    color: rgb(210, 64, 64);
+    margin: 5px;
+    border-radius: 2px;
+    padding: 1px;
+  }
+
 }
