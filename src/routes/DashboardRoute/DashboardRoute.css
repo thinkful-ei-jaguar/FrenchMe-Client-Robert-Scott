@@ -7,6 +7,10 @@
   color: rgb(210, 64, 64);
 }
 
+.loading {
+  height: 100vh;
+}
+
 .startPracticeButton {
   border-radius: 5px;
   background-color: rgb(249, 249, 249);

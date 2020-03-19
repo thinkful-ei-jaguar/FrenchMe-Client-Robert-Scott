@@ -11,6 +11,7 @@ class DashboardRoute extends Component {
       language:{},
       words:[],
       total_count: null,
+      isloginLoading: false
     }
   }
 
@@ -20,14 +21,15 @@ class DashboardRoute extends Component {
       this.setState({
         language:res.language,
         words:res.words,
+        isloginLoading: true,
       })
       this.context.setLanguage(res.language);
       this.context.setWords(res.words);
     })
   }
 
-  mapTheWords=(words)=>{
-    return words.map((word, idx)=>{
+  mapTheWords = (words) => {
+    return words.map((word, idx) => {
       return <div key={idx}>
         <h2 className='frenchWord'>{word.original}</h2>
     <p className='correctWord'> Correct Answer Count: {word.correct_count}</p>
@@ -38,6 +40,8 @@ class DashboardRoute extends Component {
 
   render() {
     return (
+      <>
+      {this.state.isloginLoading ?
       <section className='dashboard'>
         <h2 className='languageHeader'>Language: {this.state.language.name}</h2>
         <Link className='startPracticeButton' to='/learn'>Start Practicing</Link>
@@ -49,6 +53,9 @@ class DashboardRoute extends Component {
         </div>
         
       </section>
+      : <section className='loading'><p>Loading...</p> </section>
+      }
+      </>
     );
   }
 }
