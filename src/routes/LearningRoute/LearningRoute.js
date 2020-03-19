@@ -70,11 +70,15 @@ class LearningRoute extends Component {
 
   learnPage = () => {
     return (<section className='learnPage'>
-        <h2 className='languageHeader'>This is learning page</h2>
-        <div></div>
+        <h2 className='languageHeader'>Learning Page</h2>
+        <div>
+          <p>Correct Guesses: {this.state.words.correct_count}</p> 
+          <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>
+          <p>Total Correct Count: {this.context.language.total_score} </p> 
+        </div>
         <form onSubmit={this.handleSubmit}>
           <label>How do you say <em>{this.state.words.original}</em> in English?
-            <input onChange={this.handleChangeAnswer} value={this.state.guess} className='guessInput' type='text' />
+            <input onChange={this.handleChangeAnswer} value={this.state.guess} className='guessInput' type='text' required />
           </label>
           <br />
           <Button className='submitAnswer' type='submit'>Submit Your Answer</Button>

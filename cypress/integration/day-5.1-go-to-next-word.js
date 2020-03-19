@@ -51,7 +51,7 @@ describe(`User story: Go to next word`, function() {
 
     cy.get('main form').within($form => {
       cy.get('label[for=learn-guess-input]')
-        .should('have.text', `What's the translation for this word?`)
+        .should('have.text', `How do you say {this.state.words.original}</em> in English?`)
 
       cy.get('input#learn-guess-input')
         .should('have.attr', 'type', 'text')
