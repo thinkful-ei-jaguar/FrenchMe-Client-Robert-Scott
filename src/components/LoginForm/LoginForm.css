@@ -3,3 +3,23 @@
   padding: 15px;
   height: 100vh;
 }
+
+.signup {
+    background-color: white;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(210, 64, 64);
+    border: 2px solid rgb(239, 239, 239);
+    font-size: 25px;
+    padding: 3px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+  
+.signup:hover {
+    background-color: rgb(210, 64, 64);
+    color: white;
+    -webkit-box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
+    -moz-box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
+    box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
+}
