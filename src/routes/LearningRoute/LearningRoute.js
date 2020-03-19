@@ -29,7 +29,7 @@ class LearningRoute extends Component {
 
   handleChangeAnswer = e =>{
     this.setState({
-      guess: e.target.value,
+      guess: e.target.value.toLowerCase(),
     })
   }
 
@@ -78,7 +78,7 @@ class LearningRoute extends Component {
         </div>
         <form onSubmit={this.handleSubmit}>
           <label>How do you say <em>{this.state.words.original}</em> in English?
-            <input onChange={this.handleChangeAnswer} value={this.state.guess.toLowerCase()} className='guessInput' type='text' required />
+            <input onChange={this.handleChangeAnswer} value={this.state.guess} className='guessInput' type='text' required />
           </label>
           <br />
           <Button className='submitAnswer' type='submit'>Submit Your Answer</Button>

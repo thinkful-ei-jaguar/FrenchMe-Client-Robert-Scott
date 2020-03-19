@@ -9,9 +9,10 @@
     list-style-type: none;
     text-decoration: none;
     color: rgb(210, 64, 64);
-    border: 2px solid rgb(239, 239, 239);
+    border: 2px solid rgb(205, 205, 205);
     font-size: 25px;
-    padding: 3px;
+    padding: 3px 8px 3px 8px;
+
     margin-top: 25px;
     border-radius: 5px;
 }
