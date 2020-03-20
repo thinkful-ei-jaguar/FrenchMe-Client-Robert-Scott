@@ -15,11 +15,40 @@ Development Environment: Zeit Now
 Testing: Cypress, Mocha, Chai
 
 ### Summary
-French Moi is an app that uses spaced repetition to help users memorize French words
-The app displays a word in French and then asks the user to recall the corresponding word in English
+French Moi is an app that uses spaced repetition to help users memorize French words.
 
-If the user answers incorrectly, that word will be asked again sooner. If the answer is correct, the user will be asked later on.
-The user will be able to see their total count of correct guesses as well as the number of times they got each word wrong or right
+The user will have the option to log in or sign up, and then will be directed to a dashboard displaying their total correct answer, a list of French words to memorize, as well as the number of times they got each word wrong or right. 
+<br />
+
+![Dashboard](README-asset/dashboard.png?raw=true)
+
+The app displays a word in French and then asks the user to recall the corresponding word in English.
+<br />
+
+![LearnPageFirstView](README-asset/learnpage1.png?raw=true)
+
+<br />
+
+
+If the user answers incorrectly, that word will be asked again sooner. 
+
+<br />
+![LearnPageIncorrectAnswerView](README-asset/learnpageincorrect.png?raw=true)
+
+If the answer is correct, the user will be asked later on.
+
+<br />
+![LearnPageCorrectAnswerView](README-asset/learnpagecorrect.png?raw=true)
+
+
+The user will be able to see their total count of correct guesses as well as the number of times they got each word wrong or right.
+
+
+
+
+
+<br />
+
 
 <br />
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
