@@ -1,4 +1,49 @@
-# Spaced Repetition Capstone
+## French Moi App
+A Spaced Repetition App by Robert Perez & Scott Lingner
+
+
+Live Link: [https://frenchmoi.now.sh/](https://frenchmoi.now.sh/)
+
+### Tech Stack for French Moi
+React, CSS, Node, Express, PostgreSQL, Enzyme, Mocha, Chai, Cypress.
+
+### Summary
+
+French Moi is an app that uses spaced repetition to help users memorize French words
+The app displays a word in French and then asks the user to recall the corresponding word in English
+
+If the user answers incorrectly, that word will be asked again sooner. If the answer is correct, the user will be asked later on.
+The user will be able to see their total count of correct guesses as well as the number of times they got each word wrong or right
+
+<br />
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `npm run test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Setup
 
