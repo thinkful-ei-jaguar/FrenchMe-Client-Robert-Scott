@@ -33,11 +33,13 @@ The app displays a word in French and then asks the user to recall the correspon
 If the user answers incorrectly, that word will be asked again sooner. 
 
 <br />
+
 ![LearnPageIncorrectAnswerView](README-asset/learnpageincorrect.png?raw=true)
 
 If the answer is correct, the user will be asked later on.
 
 <br />
+
 ![LearnPageCorrectAnswerView](README-asset/learnpagecorrect.png?raw=true)
 
 
