@@ -1,14 +1,20 @@
 ## French Moi App
 A Spaced Repetition App by Robert Perez & Scott Lingner
 
+### Live Link: 
+[https://frenchmoi.now.sh/](https://frenchmoi.now.sh/)
 
-Live Link: [https://frenchmoi.now.sh/](https://frenchmoi.now.sh/)
+### Server Repo: 
+[https://github.com/thinkful-ei-jaguar/FrenchMe-Server-Robert-Scott](https://github.com/thinkful-ei-jaguar/FrenchMe-Server-Robert-Scott)
 
 ### Tech Stack for French Moi
-React, CSS, Node, Express, PostgreSQL, Enzyme, Mocha, Chai, Cypress.
+Front-end: React.js, CSS, media queries
+Server: PostgreSQL
+Hosting/SaaS: Heroku 
+Development Environment: Zeit Now
+Testing: Cypress, Mocha, Chai
 
 ### Summary
-
 French Moi is an app that uses spaced repetition to help users memorize French words
 The app displays a word in French and then asks the user to recall the corresponding word in English
 
