@@ -3,59 +3,59 @@ import { Link } from 'react-router-dom';
 import TokenService from '../../services/token-service';
 import UserContext from '../../contexts/UserContext';
 import './Header.css';
+import { ReactComponent as Logo } from './Assets/logo.svg';
 
 class Header extends Component {
-  static contextType = UserContext
+  static contextType = UserContext;
 
   handleLogoutClick = () => {
-    this.context.processLogout()
-  }
+    this.context.processLogout();
+  };
 
   renderLogoutLink() {
     return (
       <div>
-        <span className='userName'>
-          Welcome, {this.context.user.name}!
-        </span>
+        <span className="userName">Welcome, {this.context.user.name}!</span>
         <nav>
-          <Link
-            className='links'
-            onClick={this.handleLogoutClick}
-            to='/login'>
+          <Link className="links" onClick={this.handleLogoutClick} to="/login">
             Logout
           </Link>
         </nav>
       </div>
-    )
+    );
   }
 
   renderLoginLink() {
     return (
       <nav>
-        <Link className='links' to='/login'>Login</Link>
-        {' '}
-        <Link className='links' to='/register'>Sign up</Link>
+        <Link className="links" to="/login">
+          Login
+        </Link>{' '}
+        <Link className="links" to="/register">
+          Sign up
+        </Link>
       </nav>
-    )
+    );
   }
 
   render() {
     return (
-      <header className='header'>
-        <h1 className='logo'>
-          <span role='img' aria-label='french-flag-emoji'>🇫🇷</span>
-          <Link className='logo' to='/'>
-            French Moi
+      <header className="header">
+        <h1 className="logo">
+          <Link className="logo" to="/">
+            <Logo
+              style={{ width: '300px', fill: '#626363', paddingTop: '20px' }}
+            />
           </Link>
         </h1>
-        <div className='navLinks'>
-        {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
+        <div className="navLinks">
+          {TokenService.hasAuthToken()
+            ? this.renderLogoutLink()
+            : this.renderLoginLink()}
         </div>
       </header>
     );
   }
 }
 
-export default Header
+export default Header;

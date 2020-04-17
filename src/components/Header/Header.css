@@ -1,17 +1,20 @@
 h1 {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .header {
   display: flex;
+  flex-direction: row;
+  height: 100px;
   justify-content: space-between;
+  align-items: center;
   background-color: rgb(249, 249, 249);
   border-bottom: 3px solid rgb(220, 220, 220);
 }
 
 .logo {
   font-size: 50px;
-  margin: 20px;
+  /* margin: 20px; */
   list-style-type: none;
   text-decoration: none;
   color: rgb(79, 79, 79);
@@ -30,7 +33,7 @@ h1 {
   font-size: 15px;
 }
 
-.links{
+.links {
   margin: 15px;
   font-size: 30px;
   list-style-type: none;
@@ -72,5 +75,4 @@ h1 {
     border-radius: 2px;
     padding: 1px;
   }
-
 }
