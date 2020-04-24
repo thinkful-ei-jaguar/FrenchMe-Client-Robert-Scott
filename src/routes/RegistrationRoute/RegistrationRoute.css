@@ -5,5 +5,12 @@
 }
 
 .regDescription {
+  margin-top: 20%;
   font-size: 25px;
+}
+
+@media (min-width: 600px) {
+  .regDescription {
+    margin-top: 5%;
+  }
 }

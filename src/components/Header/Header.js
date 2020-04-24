@@ -17,6 +17,9 @@ class Header extends Component {
       <div>
         <span className="userName">Welcome, {this.context.user.name}!</span>
         <nav>
+          <Link className="links" to="/dashboard">
+            Dashboard
+          </Link>
           <Link className="links" onClick={this.handleLogoutClick} to="/login">
             Logout
           </Link>
@@ -28,12 +31,8 @@ class Header extends Component {
   renderLoginLink() {
     return (
       <nav>
-        <Link className="links" to="/login">
-          Login
-        </Link>{' '}
-        <Link className="links" to="/register">
-          Sign up
-        </Link>
+        <Link className="linksLogin" to="/login" />{' '}
+        <Link className="linksSignup" to="/register" />
       </nav>
     );
   }
@@ -43,9 +42,7 @@ class Header extends Component {
       <header className="header">
         <h1 className="logo">
           <Link className="logo" to="/">
-            <Logo
-              style={{ width: '300px', fill: '#626363', paddingTop: '20px' }}
-            />
+            <Logo style={{ width: '90%', fill: '#413f78', paddingTop: '1%' }} />
           </Link>
         </h1>
         <div className="navLinks">

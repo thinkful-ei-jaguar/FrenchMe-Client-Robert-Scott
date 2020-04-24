@@ -1,13 +1,27 @@
 .learnPage {
   height: 100vh;
+  line-height: 50px;
+}
+
+.question {
+  font-size: 28px;
+}
+
+.languageHeaderLearn {
+  font-size: 200%;
+  margin: 40px;
 }
 
 .guessInput {
+  display: block;
+  margin: auto;
   font-size: 20px;
-  margin: 5px;
+  padding-top: 20px;
+  width: 30%;
   border-radius: 3px;
 }
 
 .submitAnswer {
-  margin: 15px;
+  margin-top: 25px;
+  width: 20%;
 }

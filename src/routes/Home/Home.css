@@ -1,0 +1,22 @@
+.page-wrapper {
+  background-image: url(French-Moi-Biker.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.biker {
+  margin-top: 72%;
+  width: 60%;
+}
+
+@media (min-width: 600px) {
+  .page-wrapper {
+    height: 90%;
+    width: 90%;
+    margin: 2% auto;
+  }
+  .biker {
+    margin-top: 12%;
+    width: 60%;
+  }
+}

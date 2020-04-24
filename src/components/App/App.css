@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-
 .App {
   margin: 20px;
-  font-family: 'Sen', sans-serif;
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  background-color: rgb(236, 230, 230);
+  background-color: rgb(255, 255, 255);
   margin: 0 auto;
+  height: 100vh;
   padding-bottom: 50px;
 }

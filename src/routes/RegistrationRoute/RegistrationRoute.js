@@ -7,20 +7,16 @@ class RegistrationRoute extends Component {
     history: {
       push: () => {},
     },
-  }
+  };
 
   handleRegistrationSuccess = () => {
-    const { history } = this.props
-    history.push('/login')
-  }
+    const { history } = this.props;
+    history.push('/login');
+  };
 
   render() {
     return (
       <section>
-        <p className='regDescription'>
-          Practice learning a language with the spaced reptition revision technique.
-        </p>
-        <h2 className='signUpHeader'>Sign up</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
@@ -29,4 +25,4 @@ class RegistrationRoute extends Component {
   }
 }
 
-export default RegistrationRoute
+export default RegistrationRoute;

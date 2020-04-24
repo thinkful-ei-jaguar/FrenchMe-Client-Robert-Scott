@@ -1,5 +1,4 @@
-
-.Label{
+.Label {
   margin: 10px;
   font-size: 30px;
   color: grey;
@@ -7,10 +6,26 @@
 
 .Input {
   font-size: 20px;
-  font-family: 'Mallanna', sans-serif;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
   margin: 10px;
-  padding: 3px;
-  border-radius: 5px;
+  color: #393939;
+  box-shadow: none;
+  text-decoration: none;
+  width: 55%;
+  background: transparent;
+  border: transparent;
+  border-bottom: 1px solid grey;
+}
+
+Input:focus {
+  outline: none;
+  background-color: rgb(231, 231, 231);
+}
+
+.Input::placeholder {
+  color: rgb(215, 215, 215);
+  text-align: center;
 }
 
 .Required {

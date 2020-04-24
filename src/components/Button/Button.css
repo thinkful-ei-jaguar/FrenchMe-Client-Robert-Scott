@@ -1,18 +1,20 @@
 .Button {
-  color: rgb(210, 64, 64);
-  border-width: 3px;
-  font-size: 25px;
+  color: #413f78;
+  border-width: 1px;
+  font-size: 18px;
+  font-family: 'Playfair Display', serif;
   padding: 6px;
   border-radius: 3px;
-  margin-bottom: 10px;
+  width: 30%;
+  margin: 2px auto;
+  flex-wrap: wrap;
 }
 
 .Button:hover {
   color: rgb(60, 72, 198);
-  background-color: rgb(210, 64, 64);
+  background-color: rgb(205, 52, 52);
   color: white;
-  -webkit-box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
-  -moz-box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
-  box-shadow: 10px 7px 16px -9px rgba(143,130,143,1);
+  -webkit-box-shadow: 10px 7px 16px -9px rgba(143, 130, 143, 1);
+  -moz-box-shadow: 10px 7px 16px -9px rgba(143, 130, 143, 1);
+  box-shadow: 10px 7px 16px -9px rgba(143, 130, 143, 1);
 }
-

@@ -35,7 +35,7 @@ h1 {
 
 .links {
   margin: 15px;
-  font-size: 30px;
+  font-size: 22px;
   list-style-type: none;
   text-decoration: none;
   color: rgb(210, 64, 64);
@@ -47,10 +47,52 @@ h1 {
   border-bottom: 1px solid rgb(210, 64, 64);
 }
 
+.linksLogin {
+  text-decoration: none;
+}
+
+.linksLogin:before {
+  content: 'Login';
+  margin: 15px;
+  font-size: 22px;
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(210, 64, 64);
+}
+
+.linksLogin:hover:before {
+  content: 'Connexion';
+  color: #413f78;
+}
+
+.linksSignup {
+  text-decoration: none;
+}
+
+.linksSignup:before {
+  content: 'Sign Up';
+  margin: 15px;
+  font-size: 22px;
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(210, 64, 64);
+}
+
+.linksSignup:hover:before {
+  content: "S'inscrire";
+  color: #413f78;
+}
+
+@media (min-width: 600px) {
+  .linksLogin {
+    margin-top: 5%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: rgb(249, 249, 249);
     border-bottom: 3px solid rgb(220, 220, 220);
   }
