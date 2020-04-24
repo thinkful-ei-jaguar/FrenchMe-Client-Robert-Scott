@@ -11,12 +11,12 @@
 
 @media (min-width: 600px) {
   .page-wrapper {
-    height: 90%;
+    height: 86%;
     width: 90%;
     margin: 2% auto;
   }
   .biker {
-    margin-top: 12%;
+    margin-top: 8%;
     width: 55%;
   }
 }
