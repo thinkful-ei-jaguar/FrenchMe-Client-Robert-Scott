@@ -1,5 +1,6 @@
 .Button {
-  color: #413f78;
+  background-color: #413f78;
+  color: white;
   border-width: 1px;
   font-size: 18px;
   font-family: 'Playfair Display', serif;
@@ -8,6 +9,14 @@
   width: 30%;
   margin: 2px auto;
   flex-wrap: wrap;
+}
+
+.Button:focus {
+  outline-color: rgb(205, 52, 52);
+  background-color: rgb(231, 231, 231, 0.4);
+  color: rgb(60, 72, 198);
+  outline-color: coral;
+  outline: solid;
 }
 
 .Button:hover {

@@ -19,7 +19,7 @@
 }
 
 Input:focus {
-  outline: none;
+  outline-color: #393939;
   background-color: rgb(231, 231, 231, 0.4);
 }
 

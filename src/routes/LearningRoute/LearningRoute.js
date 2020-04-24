@@ -10,6 +10,8 @@ class LearningRoute extends Component {
 
   constructor(props) {
     super(props);
+    this.nextButton = React.createRef();
+    this.focus = this.focus.bind(this);
     this.state = {
       language: {},
       words: {},
@@ -17,6 +19,12 @@ class LearningRoute extends Component {
       isLoading: true,
       isCorrect: true,
     };
+  }
+
+  focus() {
+    // Explicitly focus the text input using the raw DOM API
+    // Note: we're accessing "current" to get the DOM node
+    this.nextButton.current.focus();
   }
 
   async componentDidMount() {
