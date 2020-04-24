@@ -5,10 +5,12 @@ import { Animated } from 'react-animated-css';
 
 export default function Home() {
   return (
-    <div className="page-wrapper">
-      <Animated animationIn="slideInLeft" animationInDuration={1750}>
-        <Biker className="biker" />
-      </Animated>
+    <div className="homeWrap">
+      <div className="page-wrapper">
+        <Animated animationIn="slideInLeft" animationInDuration={1750}>
+          <Biker className="biker" />
+        </Animated>
+      </div>
     </div>
   );
 }
