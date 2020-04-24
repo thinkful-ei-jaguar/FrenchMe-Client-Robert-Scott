@@ -47,7 +47,7 @@ class LoginForm extends Component {
     const { error, loading } = this.state;
     return (
       <>
-        {loading ? (
+        {loading & !error ? (
           <Loader
             type="Grid"
             height={80}
@@ -90,11 +90,11 @@ class LoginForm extends Component {
               <Button className="loginButtonLogin" type="submit">
                 Login
               </Button>
-              <div role="alert">{error && <p>{error}</p>}</div>
 
               <Link className="signup" to="/register">
                 Sign Up
               </Link>
+              <div role="alert">{error && <p>{error}</p>}</div>
             </div>
           </form>
         )}
