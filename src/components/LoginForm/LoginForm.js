@@ -67,6 +67,7 @@ class LoginForm extends Component {
             </div>
             <div className="right-container-login">
               <div className="username">
+                <h1 className="signup-header">Welcome</h1>
                 <Label htmlFor="login-username-input" />
                 <Input
                   ref={this.firstInput}

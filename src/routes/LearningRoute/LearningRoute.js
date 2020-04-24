@@ -127,7 +127,7 @@ class LearningRoute extends Component {
           <p>Total Correct Count: {this.context.language.total_score} </p>
           <Button onClick={this.handleNextWord}>Next Word</Button>
           <img
-            className="parisBackground"
+            className="parisBackgroundLearn"
             src={parisBackground}
             alt="paris-background"
           />
@@ -145,7 +145,7 @@ class LearningRoute extends Component {
           <p>Incorrect Guesses: {newcount}</p>
           <Button onClick={this.handleNextWord}>Next Word</Button>
           <img
-            className="parisBackground"
+            className="parisBackgroundLearn"
             src={parisBackground}
             alt="paris-background"
           />
