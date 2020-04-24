@@ -49,14 +49,14 @@ class LoginForm extends Component {
       <>
         {loading & !error ? (
           <Loader
-            type="Grid"
-            height={80}
-            width={80}
-            color="rgb(60, 72, 198)"
+            type="TailSpin"
+            height={150}
+            width={150}
+            color="rgb(0, 0, 0)"
             style={{
               marginLeft: 'auto',
               marginRight: 'auto',
-              marginTop: '50px',
+              marginTop: '250px',
             }}
           />
         ) : (
