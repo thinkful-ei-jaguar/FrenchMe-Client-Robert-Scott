@@ -1,10 +1,13 @@
 .register-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: rgba(255, 255, 255);
-  width: 80%;
-  padding: 25px;
-  justify-content: space-evenly;
+  width: 90%;
+  /* padding: 25px; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  margin-top: 8%;
 }
 
 .right-container-signup {
@@ -25,20 +28,26 @@
   color: grey;
   padding-bottom: 25px;
   width: 240px;
-  margin: auto;
+  margin: 0px auto;
 }
 
 .form {
   height: 100vh;
 }
 
+.signupButton {
+  width: 60%;
+}
+
 @media screen and (min-width: 600px) {
   .register-form {
-    padding: 3%;
-    width: 70%;
-    height: auto;
-    margin: auto;
-    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255);
+    width: 80%;
+    padding: 25px;
+    justify-content: space-evenly;
+    margin-top: 5%;
   }
 
   .form {

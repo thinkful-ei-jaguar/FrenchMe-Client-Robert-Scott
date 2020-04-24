@@ -63,7 +63,7 @@ class LoginForm extends Component {
           <form className="main-container" onSubmit={this.handleSubmit}>
             {/* <div className="loginWrap"> */}
             <div className="left-container-login">
-              <Bikecat style={{ width: '110%', marginTop: '15%' }} />
+              <Bikecat className="bikecat" />
             </div>
             <div className="right-container-login">
               <div className="username">
@@ -86,7 +86,9 @@ class LoginForm extends Component {
                   required
                 />
               </div>
-              <Button type="submit">Login</Button>
+              <Button className="loginButtonLogin" type="submit">
+                Login
+              </Button>
               <div role="alert">{error && <p>{error}</p>}</div>
 
               <Link className="signup" to="/register">
