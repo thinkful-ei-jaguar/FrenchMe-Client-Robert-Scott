@@ -1,20 +1,27 @@
 .register-form {
-  background: rgba(232, 232, 232, 0.5);
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255);
   width: 80%;
-  margin: 150px auto;
   padding: 25px;
+  justify-content: space-evenly;
+}
+
+.right-container-signup {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
 }
 
 .loginLink {
-  font-size: 20px;
-  font-style: italic;
+  font-size: 18px;
   text-decoration: none;
   list-style-type: none;
-  color: rgb(210, 64, 64);
+  color: #413f78;
 }
 
 .signup-header {
-  font-size: 40px;
+  font-size: 33px;
   color: grey;
   padding-bottom: 25px;
   width: 240px;
@@ -27,9 +34,11 @@
 
 @media screen and (min-width: 600px) {
   .register-form {
-    padding: 50px;
-    width: 50%;
-    margin: 10% auto;
+    padding: 3%;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 10%;
   }
 
   .form {

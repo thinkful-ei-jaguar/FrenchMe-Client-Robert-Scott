@@ -7,12 +7,12 @@
 .Input {
   font-size: 20px;
   font-family: 'Playfair Display', serif;
-  text-align: center;
-  margin: 10px;
+  text-align: left;
+  margin: 10px auto;
   color: #393939;
   box-shadow: none;
   text-decoration: none;
-  width: 55%;
+  width: 75%;
   background: transparent;
   border: transparent;
   border-bottom: 1px solid grey;
@@ -20,12 +20,12 @@
 
 Input:focus {
   outline: none;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(231, 231, 231, 0.4);
 }
 
 .Input::placeholder {
   color: rgb(215, 215, 215);
-  text-align: center;
+  text-align: left;
 }
 
 .Required {

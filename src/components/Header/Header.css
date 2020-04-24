@@ -5,7 +5,7 @@ h1 {
 .header {
   display: flex;
   flex-direction: row;
-  height: 100px;
+  padding-top: 5px;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(249, 249, 249);
@@ -14,7 +14,6 @@ h1 {
 
 .logo {
   font-size: 50px;
-  /* margin: 20px; */
   list-style-type: none;
   text-decoration: none;
   color: rgb(79, 79, 79);
@@ -101,7 +100,6 @@ h1 {
     font-size: 130%;
     list-style-type: none;
     text-decoration: none;
-    color: rgb(79, 79, 79);
   }
   .navLinks {
     display: flex;

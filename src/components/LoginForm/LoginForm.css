@@ -19,7 +19,8 @@
   width: 100%;
   min-width: 30%;
   height: 60vh;
-  background: rgb(226, 231, 241);
+  background: rgba(255, 255, 255);
+  z-index: 1;
 }
 
 @media (min-width: 600px) {
@@ -39,27 +40,27 @@
   flex: 0 1 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   height: 60vh;
   width: 100%;
   min-width: 30%;
   padding: 0.5em;
-  background: rgb(246, 246, 246, 0.4);
+  background: rgba(255, 255, 255);
 }
 
 @media (min-width: 600px) {
   .right-container-login {
+    padding-top: 10%;
+    padding-left: ;
     flex: 0 1 50%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: right;
+    align-content: right;
     height: 60vh;
     max-width: 50%;
     min-width: 30%;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: right; */
   }
 }
 

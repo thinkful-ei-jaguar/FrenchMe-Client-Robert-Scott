@@ -4,6 +4,7 @@ import Button from '../../components/Button/Button';
 import './LearningRoute.css';
 import LanguageService from '../../services/language-service';
 import { Input } from '../../components/Form/Form';
+import parisBackground from '../Home/French-Moi-Biker.svg';
 class LearningRoute extends Component {
   static contextType = LanguageContext;
 
@@ -69,41 +70,48 @@ class LearningRoute extends Component {
 
   learnPage = () => {
     return (
-      <section className="learnPage">
-        <h2 className="languageHeaderLearn">La Pratique</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label className="question">
-            How do you say{' '}
-            <span
-              style={{
-                color: 'rgb(60, 72, 198)',
-                fontSize: '30px',
-                paddingLeft: '5px',
-                paddingRight: '5px',
-              }}
-            >
-              {this.state.words.original}
-            </span>{' '}
-            in English?
-            <Input
-              onChange={this.handleChangeAnswer}
-              value={this.state.guess}
-              className="guessInput"
-              type="text"
-              required
-            />
-          </label>
+      <>
+        <section className="learnPage">
+          <h2 className="languageHeaderLearn">La Pratique</h2>
+          <form onSubmit={this.handleSubmit}>
+            <label className="question">
+              How do you say{' '}
+              <span
+                style={{
+                  color: 'rgb(60, 72, 198)',
+                  fontSize: '30px',
+                  paddingLeft: '5px',
+                  paddingRight: '5px',
+                }}
+              >
+                {this.state.words.original}
+              </span>{' '}
+              in English?
+              <Input
+                onChange={this.handleChangeAnswer}
+                value={this.state.guess}
+                className="guessInput"
+                type="text"
+                required
+              />
+            </label>
 
-          <Button className="submitAnswer" type="submit">
-            Submit
-          </Button>
-          <div>
-            <p>Correct Guesses: {this.state.words.correct_count}</p>
-            <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>
-            <p>Total Correct Count: {this.context.language.total_score} </p>
-          </div>
-        </form>
-      </section>
+            <Button className="submitAnswer" type="submit">
+              Submit
+            </Button>
+            <div>
+              <p>Correct Guesses: {this.state.words.correct_count}</p>
+              <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>
+              <p>Total Correct Count: {this.context.language.total_score} </p>
+            </div>
+          </form>
+          <img
+            className="parisBackground"
+            src={parisBackground}
+            alt="paris-background"
+          />
+        </section>
+      </>
     );
   };
 

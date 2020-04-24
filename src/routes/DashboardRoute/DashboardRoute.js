@@ -57,7 +57,15 @@ class DashboardRoute extends Component {
         </div>
         <div className="right-container">
           <div className="practiceWords">
-            <p className="word-header">Words To Practice </p>
+            <p
+              style={{
+                fontSize: '32px',
+                borderBottom: '1px solid black',
+                width: '83%',
+              }}
+            >
+              Words To Practice{' '}
+            </p>
             {this.mapTheWords(this.state.words)}
           </div>
         </div>

@@ -5,7 +5,7 @@ import UserContext from '../../contexts/UserContext';
 import Button from '../Button/Button';
 import './LoginForm.css';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Girl } from './login.svg';
+import { ReactComponent as Bikecat } from './FrenchMoi_signin.svg';
 import Loader from 'react-loader-spinner';
 class LoginForm extends Component {
   static defaultProps = {
@@ -63,7 +63,7 @@ class LoginForm extends Component {
           <form className="main-container" onSubmit={this.handleSubmit}>
             {/* <div className="loginWrap"> */}
             <div className="left-container-login">
-              <Girl style={{ fill: 'white', width: '65%', marginTop: '7%' }} />
+              <Bikecat style={{ width: '110%', marginTop: '15%' }} />
             </div>
             <div className="right-container-login">
               <div className="username">
