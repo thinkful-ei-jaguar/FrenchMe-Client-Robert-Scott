@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button';
 import './LearningRoute.css';
 import LanguageService from '../../services/language-service';
 import { Input } from '../../components/Form/Form';
-import parisBackground from '../Home/French-Moi-Biker.svg';
+import parisBackgroundImg from '../Home/French-Moi-Biker.svg';
 class LearningRoute extends Component {
   static contextType = LanguageContext;
 
@@ -107,7 +107,7 @@ class LearningRoute extends Component {
           </form>
           <img
             className="parisBackground"
-            src={parisBackground}
+            src={parisBackgroundImg}
             alt="paris-background"
           />
         </section>
@@ -128,7 +128,7 @@ class LearningRoute extends Component {
           <Button onClick={this.handleNextWord}>Next Word</Button>
           <img
             className="parisBackgroundLearn"
-            src={parisBackground}
+            src={parisBackgroundImg}
             alt="paris-background"
           />
         </section>
@@ -146,7 +146,7 @@ class LearningRoute extends Component {
           <Button onClick={this.handleNextWord}>Next Word</Button>
           <img
             className="parisBackgroundLearn"
-            src={parisBackground}
+            src={parisBackgroundImg}
             alt="paris-background"
           />
         </section>
