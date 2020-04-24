@@ -9,6 +9,11 @@
   width: 60%;
 }
 
+.practiceFrench {
+  font-size: 33px;
+  margin-top: 10px;
+}
+
 @media (min-width: 600px) {
   .page-wrapper {
     height: 86%;
@@ -18,5 +23,9 @@
   .biker {
     margin-top: 8%;
     width: 55%;
+  }
+  .practiceFrench {
+    font-size: 45px;
+    margin-top: 15px;
   }
 }
