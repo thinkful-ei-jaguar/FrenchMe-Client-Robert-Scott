@@ -126,6 +126,11 @@ class LearningRoute extends Component {
           <p>Incorrect Guesses: {this.state.words.incorrect_count}</p>
           <p>Total Correct Count: {this.context.language.total_score} </p>
           <Button onClick={this.handleNextWord}>Next Word</Button>
+          <img
+            className="parisBackground"
+            src={parisBackground}
+            alt="paris-background"
+          />
         </section>
       );
     } else {
@@ -139,6 +144,11 @@ class LearningRoute extends Component {
           <p>Correct Guesses: {this.state.words.correct_count}</p>
           <p>Incorrect Guesses: {newcount}</p>
           <Button onClick={this.handleNextWord}>Next Word</Button>
+          <img
+            className="parisBackground"
+            src={parisBackground}
+            alt="paris-background"
+          />
         </section>
       );
     }

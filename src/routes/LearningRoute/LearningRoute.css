@@ -1,13 +1,19 @@
 .learnPage {
   display: flex;
   flex-direction: column;
-  line-height: 50px;
+  line-height: 40px;
   background: transparent;
 }
 
+@media (min-width: 600px) {
+  .learnPage {
+    line-height: 50px;
+  }
+}
+
 .parisBackground {
-  opacity: 30%;
-  margin-top: 70%;
+  opacity: 60%;
+  margin-top: -41%;
   position: sticky;
   pointer-events: none;
 }
@@ -15,16 +21,30 @@
 @media (min-width: 600px) {
   .parisBackground {
     margin-top: -25%;
+    opacity: 30%;
   }
 }
 
 .question {
-  font-size: 28px;
+  font-size: 22px;
+}
+
+@media (min-width: 600px) {
+  .question {
+    font-size: 28px;
+  }
 }
 
 .languageHeaderLearn {
-  font-size: 200%;
-  margin: 40px;
+  font-size: 150%;
+  margin: 10px;
+}
+
+@media (min-width: 600px) {
+  .languageHeaderLearn {
+    font-size: 200%;
+    margin: 40px;
+  }
 }
 
 .guessInput {
@@ -32,8 +52,14 @@
   margin: auto;
   font-size: 20px;
   padding-top: 20px;
-  width: 30%;
+  width: 60%;
   border-radius: 3px;
+}
+
+@media (min-width: 600px) {
+  .guessInput {
+    width: 30%;
+  }
 }
 
 .submitAnswer {
